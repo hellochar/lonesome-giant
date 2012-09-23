@@ -1,0 +1,26 @@
+!!! 5
+%html
+  %head
+    %title Lonesome Giant
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %link(href="/bootstrap/css/bootstrap.css" rel="stylesheet") 
+    %script(src="/bootstrap/js/bootstrap.js")
+    :css
+      #content {
+        padding-top: 40px;
+      }
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        %a.brand(href='#') Lonesome Giant
+        .nav-collapse.collapse
+          %ul.nav
+            %li
+              %a(href='/about') About
+            %li
+              %a(href='/contact') Contact
+
+  #content
+    = yield
