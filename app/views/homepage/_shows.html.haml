@@ -1,2 +1,20 @@
-%h3 Hi a;sldkfjdsa;
-%p a;dslf
+:css
+  .gig {
+    background: -webkit-linear-gradient(top, #fbfbfb, #f4f4f4, #e4e4e4);
+    border-radius: 2px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #bbb;
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+
+    padding: 5px;
+  }
+%h1 Upcoming Gigs
+- for date in (0...3).map{|x| Time.now + x.weeks}
+  .gig
+    %h4= date.strftime('%a, %B %e %Y')
+    %p
+      At
+      %a(href='#') Some location,
+      %span.time= date.strftime('%r')

@@ -17,6 +17,9 @@
     z-index: 0;
     opacity: 0.4;
   }
+  .fb-like {
+    background: white;
+  }
 .container
   .row
     = # %h1.title Lonesome Giant
@@ -32,8 +35,6 @@
     .span4
       = render "shows"
     .span4
-      %h3 Hi
-      %p a;dslf
+      = render "music"
     .span4
-      %h3 Hi
-      %p a;dslf
+      <div style="position: absolute; top: 100px;"class="fb-like" data-href="http://www.facebook.com/lonesomegiant" data-send="true" data-width="300" data-show-faces="true"></div>
