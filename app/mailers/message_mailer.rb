@@ -5,7 +5,7 @@ class MessageMailer < ActionMailer::Base
     @email = email
     @message = message
 
-    mail(:to => "timur.bazhirov@gmail.com", :from => @email, :subject => "#{name} contacted Lonesome Giant") 
-    mail(:to => "hellocharlien@hotmail.com", :from => @email, :subject => "#{name} contacted Lonesome Giant") 
+    mail(:to => "timur.bazhirov@gmail.com", :from => "lonesomegiant@gmail.com", :subject => "#{name} contacted Lonesome Giant") 
+    mail(:to => "hellocharlien@hotmail.com", :from => "lonesomegiant@gmail.com", :subject => "#{name} contacted Lonesome Giant") 
   end
 end

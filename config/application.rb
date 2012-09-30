@@ -58,5 +58,16 @@ module LonesomeGiant
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    ActionMailer::Base.delivery_method = :smtp
+    ActionMailer::Base.smtp_settings = {
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => "http://frozen-basin-2552.herokuapp.com",
+      :user_name => "lonesomegiant@gmail.com",
+      :password => "wearelonesomegiant",
+      :authentication => "plain",
+      :enable_starttls_auto => true
+    }
   end
 end
