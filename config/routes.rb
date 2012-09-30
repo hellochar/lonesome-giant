@@ -1,7 +1,8 @@
 LonesomeGiant::Application.routes.draw do
   root :to => "homepage#index"
   match "/bio" => "bio#index"
-  match "/contact" => "contact#index"
+  match "/contact" => "contact#index", :via => :get
+  match "/contact" => "contact#send_email", :via => :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
