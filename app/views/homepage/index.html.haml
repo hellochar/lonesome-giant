@@ -14,9 +14,11 @@
     .span12
       #mainCarousel.carousel.slide
         .carousel-inner
-          - Dir['public/bandpics/*'].each do |fname|
-            .item
+          - Dir['public/bandpics/*'].each_with_index do |fname, idx|
+            .item(class="#{idx == 0 ? 'active' : nil}")
               %img(src="/#{fname.gsub('public/', '')}")
+        <a class="carousel-control left" href="#mainCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#mainCarousel" data-slide="next">&rsaquo;</a>
   .row 
     .span4
       = render "music"
