@@ -18,7 +18,7 @@
         .nav-collapse.collapse
           %ul.nav
             %li
-              %a(href='/about') About
+              %a(href='/bio') Bios
             %li
               %a(href='/contact') Contact
 
@@ -34,3 +34,4 @@
       }(document, 'script', 'facebook-jssdk'));
     #content
       = yield
+    = render '/footer'

@@ -1,0 +1,13 @@
+.container
+  .row
+    .span12
+      %h1 Contact Us
+      = form_tag("/contact", :method => "post") do
+        = label_tag(:q, "Name:")
+        = text_field_tag(:q)
+        = label_tag(:p, "Email:")
+        = text_field_tag(:p)
+        = label_tag(:m, "Message:")
+        = text_area_tag(:m, "Enter a message", :size => "24x6")
+      - ['hellocharlien@hotmail.com', 'qwer@zoo.com', 'asdf@asdf.com'].each do |email|
+        %a(href="mailto:#{email}")= email

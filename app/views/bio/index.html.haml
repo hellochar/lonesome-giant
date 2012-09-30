@@ -1,0 +1,15 @@
+- taiki_info = {:name => "Taiki Kim", :about => " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur lacus massa. Sed a tortor turpis. Cras condimentum elit non augue feugiat dignissim. Ut viverra, mauris nec lacinia volutpat, augue est ultricies purus, sit amet euismod ante leo et massa. Donec eget nisl vitae felis adipiscing porttitor. Suspendisse luctus felis in lacus scelerisque luctus. Nulla facilisi. Nulla placerat dignissim odio at pellentesque. Etiam tristique vulputate eleifend. Phasellus vel urna dolor, quis volutpat diam. Mauris aliquet augue a leo gravida sodales. Aenean interdum pharetra arcu sed iaculis. Curabitur imperdiet, dolor in tempor eleifend, nisl mauris accumsan dolor, id sollicitudin lorem enim at nulla. Nunc lobortis ultricies mi vel commodo. Curabitur hendrerit tincidunt nisi a facilisis."}
+- xiaohan_info = {:name => "Xiaohan Zhang", :about => " Praesent lectus quam, tincidunt non porttitor a, porttitor nec dui. Sed ultricies euismod arcu id consectetur. Nunc sodales pellentesque sapien, sit amet viverra lorem varius at. Sed semper scelerisque mi, tincidunt euismod ipsum aliquam sit amet. Aliquam nulla magna, pellentesque luctus dictum quis, faucibus nec lectus. Suspendisse sagittis, eros ac volutpat hendrerit, elit turpis elementum mauris, quis congue mi dolor sed libero. Morbi iaculis dolor feugiat diam elementum dapibus. Aenean nisl nibh, commodo et dapibus quis, convallis in odio. Pellentesque pretium congue rhoncus. In sem purus, facilisis a congue at, fringilla et sapien. Aliquam et venenatis elit. Nulla nec dolor purus, non pellentesque lorem. In hac habitasse platea dictumst."}
+- timur_info = {:name => "Timur Bazhirov", :about => " Sed ac est aliquam eros porta varius quis a lectus. Suspendisse et magna sapien. Morbi placerat pulvinar nibh ac egestas. Phasellus iaculis diam nec lacus iaculis quis ornare nunc scelerisque. Donec ornare interdum felis sed dictum. In enim enim, vehicula nec venenatis posuere, facilisis ac ligula. Nulla bibendum tellus vitae lorem porttitor condimentum. Integer volutpat facilisis porta. Phasellus elit odio, iaculis a facilisis eu, venenatis sit amet velit. Fusce non turpis turpis. Curabitur venenatis mauris sed turpis volutpat pulvinar."}
+
+
+
+.container
+  .row
+    - person_infos = {"taiki" => taiki_info, "xiaohan" => xiaohan_info, "timur" => timur_info}
+    - person_infos.each do |name, info|
+      .span6
+        .person(style="padding: 5px; text-align: justify; clear:both")
+          %h1= info[:name]
+          %img(src="/biopics/#{name}.jpg" style="float:#{rand(2) < 1 ? 'right' : 'left'}; margin: 0px 10px; width: 200px;")
+          %p= info[:about]
