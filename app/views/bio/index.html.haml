@@ -5,11 +5,10 @@
 
 
 .container
-  .row
-    - person_infos = {"taiki" => taiki_info, "xiaohan" => xiaohan_info, "timur" => timur_info}
-    - person_infos.each do |name, info|
-      .span6
-        .person(style="padding: 5px; text-align: justify; clear:both")
-          %h1= info[:name]
-          %img(src="/biopics/#{name}.jpg" style="float:#{rand(2) < 1 ? 'right' : 'left'}; margin: 0px 10px; width: 200px;")
-          %p= info[:about]
+  - person_infos = {"taiki" => taiki_info, "xiaohan" => xiaohan_info, "timur" => timur_info}
+  - person_infos.each_with_index do |(name, info), index|
+    .span6
+      .person(style="text-align: justify; clear:both")
+        %h1= info[:name]
+        %img(src="/biopics/#{name}.jpg" style="float:#{rand(2) < 1 ? 'right' : 'left'}; margin: 0px 10px; width: 200px;")
+        %p= info[:about]
