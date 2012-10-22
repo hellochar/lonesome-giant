@@ -1,2 +1,3 @@
 %h1 Listen
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3a%2f%2fapi.soundcloud.com%2ftracks%2f59450662&show_artwork=true"></iframe> 
+- ['2F63728207', '2F63728018', '2F62149279'].each do |id|
+  %iframe(width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3a%2f%2fapi.soundcloud.com%2ftracks%#{id}&show_artwork=false")

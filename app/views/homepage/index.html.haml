@@ -6,16 +6,16 @@
   });
 .container
   .row
-    .span12
-      %h1.title Lonesome Giant
-      %a(href="http://facebook.com/lonesomegiant")
-        %img(src="/icons32x32/fb_1.png" style="vertical-align: baseline; width: 2em; margin-right: 10px;")
-      <div class="fb-like" data-href="http://facebook.com/lonesomegiant" style="vertical-align: 30%;" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div> 
-      /
-        %span
-          %a(href="http://facebook.com/lonesomegiant")
-            %img(href="/icons32x32/fb_1.png")
+    .span12.title
+      %h1 Lonesome Giant
+      .fb
+        %a(href="http://facebook.com/lonesomegiant")
+          %img(src="/icons32x32/fb_1.png")
+        .fb-like(data-href="http://facebook.com/lonesomegiant" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true")
 
+  .row
+    .span12
+      %p.about Lonesome Giant is a six-man band originating in the city of Berkeley, CA. We come from a variety of backgrounds and musical experiences to bring you a unique blend of rock, jazz and pop. We are available to play gigs and shows in the Bay Area; if you'd like contact us, <a href='/contact'>click here</a>.
   .row
     .span12
       #mainCarousel.carousel.slide
@@ -26,7 +26,7 @@
         <a class="carousel-control left" href="#mainCarousel" data-slide="prev">&lsaquo;</a>
         <a class="carousel-control right" href="#mainCarousel" data-slide="next">&rsaquo;</a>
   .row 
-    .span4
+    .span6
       = render "music"
-    .span8
+    .span6
       = render "watch"

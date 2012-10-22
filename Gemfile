@@ -5,6 +5,8 @@ gem 'haml'
 gem 'pry'
 gem 'pg'
 
+gem 'soundcloud'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
