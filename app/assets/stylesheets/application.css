@@ -16,14 +16,15 @@
   font-family:  Verdana, Geneva, sans-serif;
 }
 .about {
-  font-size: 150%;
-  font-weight: 300;
+  font-size: 120%;
   line-height: 150%;
   text-align: justify;
+  padding-bottom: 10px;
 }
 
 .title {
   text-align: center;
+  padding-bottom: 10px;
 }
 .title h1 {
   display: inline;
